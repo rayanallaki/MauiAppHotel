@@ -20,13 +20,32 @@
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
 
-                    <Label Grid.Row="0" Grid.Column="0" Text="Adultos:"/>
-                    
-                    <Label Grid.Row="0" Grid.Column="1" TextColor="{StaticResource Primary}" Text="10"/>
+                    <Label Grid.Row="0" Grid.Column="0" 
+						   Text="Adultos:"/>
 
-                    <Stepper Grid.Row="0" Grid.Column="2" x:Name="stp_adultos" Minimum="0" Maximum="10" Increment="1"/>
+                    <Label Grid.Row="0" Grid.Column="1" 
+						   TextColor="{StaticResource Primary}" 
+						   Text="{Binding Value}" 
+						   BindingContext="{x:Reference stp_adultos}"/>
 
-                    <Label Grid.Row="1" Grid.Column="0" Text="Crianças:"/>
+                    <Stepper Grid.Row="0" Grid.Column="2" 
+							 x:Name="stp_adultos" 
+							 Minimum="0" 
+							 Maximum="10" 
+							 Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" 
+						   Text="Crianças:"/>
+                    <Label Grid.Row="1" Grid.Column="1" 
+				           TextColor="{StaticResource Primary}" 
+				           Text="{Binding Value}" 
+				           BindingContext="{x:Reference stp_crianças}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2" 
+					         x:Name="stp_crianças" 
+					         Minimum="0" 
+					         Maximum="10" 
+					         Increment="1"/>
                 </Grid>
             </VerticalStackLayout>
         </Frame>
