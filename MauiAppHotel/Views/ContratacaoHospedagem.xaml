@@ -40,13 +40,38 @@
 				           TextColor="{StaticResource Primary}" 
 				           Text="{Binding Value}" 
 				           BindingContext="{x:Reference stp_crianças}"/>
-
                     <Stepper Grid.Row="1" Grid.Column="2" 
-					         x:Name="stp_crianças" 
-					         Minimum="0" 
-					         Maximum="10" 
-					         Increment="1"/>
+                             x:Name="stp_crianças" 
+                             Minimum="0" 
+                             Maximum="10" 
+                             Increment="1"/>    
                 </Grid>
+                      
+                <Label Text="Escolha Sua Suíte: "/>
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione Sua Acomodação"/>
+
+                <Frame Padding="10"
+                       Margin="10">
+                    <VerticalStackLayout>
+                        <Label Text="Período de Estadia"/>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in:" />
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out:" />
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Button Text="Avançar" />
+
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
