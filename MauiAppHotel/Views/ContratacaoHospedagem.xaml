@@ -49,7 +49,8 @@
                       
                 <Label Text="Escolha Sua Suíte: "/>
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione Sua Acomodação"/>
+                        Title="Selecione Sua Acomodação"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
@@ -70,7 +71,7 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" />
+                <Button Text="Avançar" Clicked="Button_Clicked"/>
 
             </VerticalStackLayout>
         </Frame>
